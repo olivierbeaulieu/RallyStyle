@@ -1,0 +1,87 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+@import "compass";
+
+$darkGray:#323232;
+$green:#96c142;
+
+
+body{
+	font-family:Helvetica, Arial !important;
+
+	.alm-oldheader#header{
+		background:$darkGray;
+	}
+	.old-nav-bar .nav-tab{
+		background:$green;
+		margin-right:0;
+		border:none;
+		border-right:1px solid darken($green, 10%);
+
+		&:first-child{
+			@include border-top-left-radius(4px);
+		}
+		&:last-of-type{
+			@include border-top-right-radius(4px);
+			border-right:none;
+		}
+	}
+	.non-harmonized #project_nav_label,
+	.simple-picker .sp-picker{
+		border:none;
+	}
+	.old-nav-bar .nav-tab-active{
+		background:#fff;
+		border-right:1px solid darken(#fff, 10%);
+	}
+	.non-harmonized .x-portlet .x-panel-tl, .non-harmonized .x-portlet .x-panel-tc, .non-harmonized .x-portlet .x-panel-tr, .non-harmonized .x-portlet-ghost .x-panel-tl, .non-harmonized .x-portlet-ghost .x-panel-tc, .non-harmonized .x-portlet-ghost .x-panel-tr{
+		background:red !important;
+	}
+	.x-panel-header-text{
+		//color:#fff !important;
+	}
+	.alm-oldheader#header #anchored #modes_and_icon{
+		padding-right:0;
+		background:none;
+		#modes{
+			&, ul li{
+				background:$green;
+			}
+		}
+	}
+	.alm-oldheader#header #header_bottom #search_bar{
+		background:none;
+	}
+	.old-nav-menu.nav-menu .tab{
+		background:#fff;
+		border:inherit;
+		@include box-shadow(none);
+	}
+	.old-nav-menu.nav-menu .menu-pane{
+		border-color:darken(#fff, 5%);
+		background:#fff;
+		@include box-shadow(0 1px 5px rgba(0,0,0,.4));
+	}
+
+	.non-harmonized#main #footer{
+		background:$darkGray !important;
+	}
+
+	.simple-picker .sp-picker .sp-label{
+		width: 150px;
+		height: 31px;
+		font-size: 1px;
+		text-indent: -10000px;
+		background: url(chrome-extension://aikhefkpljhklmggaflkoieghicflkkl/img/logo_white_150.png);
+	}
+	.alm-oldheader#header #project_display {
+		float: left;
+		position: absolute;
+		top: 9px;
+		left: 174px;
+	}
+}

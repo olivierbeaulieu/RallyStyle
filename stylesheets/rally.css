@@ -1,0 +1,95 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 13, ../sass/rally.scss */
+body {
+  font-family: Helvetica, Arial !important;
+}
+/* line 16, ../sass/rally.scss */
+body .alm-oldheader#header {
+  background: #323232;
+}
+/* line 19, ../sass/rally.scss */
+body .old-nav-bar .nav-tab {
+  background: #96c142;
+  margin-right: 0;
+  border: none;
+  border-right: 1px solid #799d33;
+}
+/* line 25, ../sass/rally.scss */
+body .old-nav-bar .nav-tab:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+/* line 28, ../sass/rally.scss */
+body .old-nav-bar .nav-tab:last-of-type {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border-right: none;
+}
+/* line 34, ../sass/rally.scss */
+body .non-harmonized #project_nav_label,
+body .simple-picker .sp-picker {
+  border: none;
+}
+/* line 37, ../sass/rally.scss */
+body .old-nav-bar .nav-tab-active {
+  background: #fff;
+  border-right: 1px solid #e6e6e6;
+}
+/* line 41, ../sass/rally.scss */
+body .non-harmonized .x-portlet .x-panel-tl, body .non-harmonized .x-portlet .x-panel-tc, body .non-harmonized .x-portlet .x-panel-tr, body .non-harmonized .x-portlet-ghost .x-panel-tl, body .non-harmonized .x-portlet-ghost .x-panel-tc, body .non-harmonized .x-portlet-ghost .x-panel-tr {
+  background: red !important;
+}
+/* line 47, ../sass/rally.scss */
+body .alm-oldheader#header #anchored #modes_and_icon {
+  padding-right: 0;
+  background: none;
+}
+/* line 51, ../sass/rally.scss */
+body .alm-oldheader#header #anchored #modes_and_icon #modes, body .alm-oldheader#header #anchored #modes_and_icon #modes ul li {
+  background: #96c142;
+}
+/* line 56, ../sass/rally.scss */
+body .alm-oldheader#header #header_bottom #search_bar {
+  background: none;
+}
+/* line 59, ../sass/rally.scss */
+body .old-nav-menu.nav-menu .tab {
+  background: #fff;
+  border: inherit;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 64, ../sass/rally.scss */
+body .old-nav-menu.nav-menu .menu-pane {
+  border-color: #f2f2f2;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+/* line 70, ../sass/rally.scss */
+body .non-harmonized#main #footer {
+  background: #323232 !important;
+}
+/* line 74, ../sass/rally.scss */
+body .simple-picker .sp-picker .sp-label {
+  width: 150px;
+  height: 31px;
+  font-size: 1px;
+  text-indent: -10000px;
+  background: url(chrome-extension://aikhefkpljhklmggaflkoieghicflkkl/img/logo_white_150.png);
+}
+/* line 81, ../sass/rally.scss */
+body .alm-oldheader#header #project_display {
+  float: left;
+  position: absolute;
+  top: 9px;
+  left: 174px;
+}

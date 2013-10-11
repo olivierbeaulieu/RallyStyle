@@ -1,0 +1,26 @@
+{
+  "name": "RallyStyle",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Makes Rally look good.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://rally1.rallydev.com/*"
+      ],
+      "css": [
+        "stylesheets/rally.css"
+      ]
+    }
+  ],
+  "web_accessible_resources":["img/logo_white_150.png"]
+}

@@ -8,11 +8,13 @@
 
 $darkGray:#323232;
 $green:#96c142;
-
+$red:#ba171b;
 
 body{
 	font-family:Helvetica, Arial !important;
+	-webkit-font-smoothing: antialiased;
 
+	// HEADER, NAVTAB
 	.alm-oldheader#header{
 		background:$darkGray;
 	}
@@ -21,6 +23,7 @@ body{
 		margin-right:0;
 		border:none;
 		border-right:1px solid darken($green, 10%);
+		font-weight:bold;
 
 		&:first-child{
 			@include border-top-left-radius(4px);
@@ -30,6 +33,7 @@ body{
 			border-right:none;
 		}
 	}
+
 	.non-harmonized #project_nav_label,
 	.simple-picker .sp-picker{
 		border:none;
@@ -40,9 +44,6 @@ body{
 	}
 	.non-harmonized .x-portlet .x-panel-tl, .non-harmonized .x-portlet .x-panel-tc, .non-harmonized .x-portlet .x-panel-tr, .non-harmonized .x-portlet-ghost .x-panel-tl, .non-harmonized .x-portlet-ghost .x-panel-tc, .non-harmonized .x-portlet-ghost .x-panel-tr{
 		background:red !important;
-	}
-	.x-panel-header-text{
-		//color:#fff !important;
 	}
 	.alm-oldheader#header #anchored #modes_and_icon{
 		padding-right:0;
@@ -56,19 +57,32 @@ body{
 	.alm-oldheader#header #header_bottom #search_bar{
 		background:none;
 	}
-	.old-nav-menu.nav-menu .tab{
-		background:#fff;
-		border:inherit;
-		@include box-shadow(none);
-	}
-	.old-nav-menu.nav-menu .menu-pane{
-		border-color:darken(#fff, 5%);
-		background:#fff;
-		@include box-shadow(0 1px 5px rgba(0,0,0,.4));
+
+	// NAV MENU
+	.old-nav-menu.nav-menu,
+	.old-nav-menu.nav-menu-active{
+		.tab{
+			background:#fff;
+			border:inherit;
+			@include box-shadow(none);
+		}
+		.menu-pane{
+			border-color:darken(#fff, 5%);
+			background:#fff;
+			@include box-shadow(0 1px 5px rgba(0,0,0,.4));
+		}
+		.nav-menu-item,
+		.nav-menu-item-active{
+			a:hover{
+				background:$green;
+			}
+		}
 	}
 
-	.non-harmonized#main #footer{
-		background:$darkGray !important;
+	#project_nav{
+		border-color:darken(#fff, 5%) !important;
+		background:#fff !important;
+		@include box-shadow(0 1px 5px rgba(0,0,0,.4) !important);
 	}
 
 	.simple-picker .sp-picker .sp-label{
@@ -76,7 +90,7 @@ body{
 		height: 31px;
 		font-size: 1px;
 		text-indent: -10000px;
-		background: url(chrome-extension://djoajahdklhnffnbedkempbfoiohgjja/img/logo_white_150.png);
+		background: url(http://dev0.psswrdbx.com/rallystyle/logo_white_150.png);
 	}
 	.alm-oldheader#header #project_display {
 		float: left;
@@ -84,4 +98,99 @@ body{
 		top: 9px;
 		left: 174px;
 	}
+
+	.browser td{
+		padding: 9px 2px;
+	}
+
+	// Bubbles, defined, proigress,completed, etc
+	&, &.ext-mac{
+		.state-table td,
+		.state-table td{
+			div{
+				padding: 0;
+				width: 30px !important;
+				height: 30px;
+				line-height: 30px;
+				border: none;
+				border-right:1px solid #fff;
+				vertical-align: middle;
+				@include border-radius(2px);
+				font-weight:bold !important;
+			}
+			&.selected div{
+				background:$green;
+			}
+			&.blocked div{
+				background:$red;
+			}
+		}
+	}
+
+	// states
+	td[class*='schedulestate0']{
+		width:188px !important;
+	}
+
+	//small burndown chart at the top of the iteration status page
+	.sumtbl{
+		th {
+			background:$darkGray;
+			color: #fff;
+		}
+		tr.dr td {
+			background: #fff;
+			border:none;
+		}
+	}
+
+	//header, switch teams
+	#project_nav_label {
+		border:none !important;
+	}
+
+	#footer,
+	#recycle{
+		color:#fff !important;
+		background:$darkGray !important;
+	}
+
+	input[name="searchbox"]{
+		background: #fff !important;
+		border: none !important;
+		border-radius: 2px;
+	}
+
+	//searchbox
+	/*$searchWidth:200px;
+	#search_bar{
+		width:370px !important;
+		top: -9px !important;
+		left: auto !important;
+		right:0px;
+		height: 36px !important;
+	}
+	#search_bar-innerCt{
+		width:100% !important;
+	}
+	#textfield-1012{
+		width:$searchWidth !important;
+		position: absolute;
+		left: auto !important;
+		right: 9px !important;
+		top: 1px !important;
+	}
+	input[name="searchbox"]{
+		width: 200px !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #fff !important;
+		height: 28px !important;
+		font-size: 14px !important;
+		color: #323232 !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, .3) !important;
+	}*/
 }
